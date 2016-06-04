@@ -1,0 +1,192 @@
+/* dark blue #2980B9; */
+/* light blue: #3498DB; */
+/* border-radius 2px; */
+/* frost: #ECF0F1 */
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body, .text-input, input {
+  font-family: Poppins;
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h3.-light {
+  font-weight: 300;
+}
+
+body {
+  font-weight: 300;
+  background: #ECF0F1;
+}
+
+.sidebar {
+  background: #fff;
+  box-shadow: rgba(0,0,0,.1) 0 0 16px;
+  height: 100vh;
+  width: 16em;
+}
+
+.navigation {
+  text-align: left;
+}
+.navigation-item {
+  line-height: 1;
+  padding: 1rem;
+  cursor: pointer;
+  display: block;
+  color: #444;
+}
+.navigation-item.active {
+  box-shadow: 4px 0 0 #2980B9;
+  background: #ECF0F1;
+}
+
+.aprende-login {
+  color: #fff;
+  min-height: 100vh;
+  background: url(https://images.unsplash.com/photo-1457282367193-e3b79e38f207?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2859edb320443cc183f022cf0a032cc1) no-repeat center;
+  background-size: cover;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.text-input {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  line-height: 1;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.form-container {
+  min-width: 25em;
+}
+
+.form-container .button {
+  margin: 0 2rem;
+}
+
+.job-list {
+
+}
+
+.jobitem-header {
+  width: 100%;
+  height: 15em;
+  background-size: cover;
+  background-position: center;
+}
+
+.avatar {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0,0,0,.05) 0 1px 0, rgba(0,0,0,0,.05) 0 2px 5px;
+  box-shadow: #fff 0 4px 4px;
+  transition: box-shadow 0.3s;
+  background-color: #888;
+  border-radius: 2px;
+}
+
+.job-list-item-container {
+  float: left;
+  width: 33.33%;
+}
+.job-list-item {
+  color: #fff;
+  height: 30vmin;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.job-list-item:hover {
+  box-shadow: rgba(0,0,0,.05) 0 1px 0, rgba(0,0,0,.15) 0 4px 11px;
+  top: -1px;
+}
+.job-list-item-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1em;
+  text-shadow: rgba(0,0,0,.1) 0 -1px 0, rgba(0,0,0,.15) 0 1px 0;
+}
+.job-list-item-cat {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  text-shadow: rgba(0,0,0,.1) 0 -1px 0, rgba(0,0,0,.15) 0 1px 0;
+}
+.job-list-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.1em;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5))
+}
+.job-list-item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  font-size: 1.1em;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  z-index: -1;
+}
+
+.button {
+  text-align: center;
+  display: block;
+  background: #2980B9;
+  color: #fff;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0 -3px 0;
+}
+.button.-inline {
+  display: inline-block;
+}
+.button:hover {
+  background: #3498DB;
+}
+.button:active {
+  background: #378BC3;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0 2px 0;
+}
+
+.upper-title {
+  text-transform: uppercase;
+  font-size: .85em;
+  font-weight: 400;
+  color: #555;
+  margin-right: 0.5rem;
+}
