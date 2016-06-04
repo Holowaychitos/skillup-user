@@ -25,15 +25,15 @@ const JobList = React.createClass({
 
       <div className='padding-1 job-list'>
         {_.map(jobs, job => {
-          return <div className='job-list-item-container' key={job.id} onClick={this.onOpen.bind(null, job.id)}>
+          return <div className='job-list-item-container' key={job._id} onClick={this.onOpen.bind(null, job._id)}>
             <div className='job-list-item background-image' style={{
-              backgroundImage: `url(${job.img})`
+              backgroundImage: `url(${job.cover})`
             }}>
               <div className='job-list-item-cat'>
                 {job.cat}
               </div>
               <div className='job-list-item-name'>
-                {job.name}
+                {job.title}
               </div>
             </div>
           </div>

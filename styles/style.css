@@ -14,17 +14,20 @@ body, .text-input, input {
   font-size: 1rem;
 }
 
-h1, h2, h3 {
-  font-weight: 600;
-}
-
-h3.-light {
+h1, h2, h3, h4, h5 {
   font-weight: 300;
 }
 
 body {
   font-weight: 300;
   background: #ECF0F1;
+}
+
+.view {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 4em;
 }
 
 .sidebar {
@@ -109,11 +112,11 @@ body {
 
 .job-list-item-container {
   float: left;
-  width: 33.33%;
+  width: 50%;
 }
 .job-list-item {
   color: #fff;
-  height: 30vmin;
+  height: 35vmin;
   margin: 1rem;
   padding: 1rem;
   cursor: pointer;
