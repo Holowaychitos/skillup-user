@@ -2,12 +2,27 @@ const React = require('react')
 const {Link} = require('react-router')
 
 const Job = React.createClass({
+  contextTypes: {
+    access: React.PropTypes.object
+  },
+
+  componentDidMount() {
+    const {access} = this.context
+
+    if (!access.name || !access.email) {
+      this.props.history.push('/');
+    }
+  },
+
   render() {
+    const {access} = this.context
+    const imageUrl = 'https://www.gravatar.com/avatar/' + window.md5(access.email) + '?s=200'
+
     return <div className='aprende-home flex'>
       <div className='sidebar txt-center flex flex-align-stretch flex-direction-column'>
         <div className='padding-2'>
-          <img className='avatar' src='https://pbs.twimg.com/profile_images/536497683892940800/4XJCbl0-.jpeg' />
-          Bienvenido, <b>Javier</b>.
+          <img className='avatar' src={imageUrl} />
+          Bienvenido, <b>{access.name}</b>.
         </div>
 
         <div className='navigation'>

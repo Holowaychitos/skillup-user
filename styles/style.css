@@ -47,8 +47,11 @@ body {
   display: block;
   color: #444;
 }
+.navigation-item:hover {
+  background: #ECF0F1;
+}
 .navigation-item.active {
-  box-shadow: 4px 0 0 #2980B9;
+  box-shadow: 5px 0 0 #2980B9;
   background: #ECF0F1;
 }
 
@@ -98,6 +101,7 @@ body {
   height: auto;
   border-radius: 100%;
   margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 2px 5px;
 }
 
 .background-image {

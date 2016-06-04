@@ -1,19 +1,28 @@
 const React = require('react')
 
 const Login = React.createClass({
+  contextTypes: {
+    update: React.PropTypes.func
+  },
 
   getInitialState() {
     return {
-      companyEmail: '',
-      companyName: ''
+      companyName: 'Joaquín',
+      companyEmail: 'escusado@gmail.com'
     };
   },
 
   onLogin() {
     var {history} = this.props
 
-    console.log('\n ON LOGIN', this.state)
+    console.log('\nON LOGIN', this.state)
 
+    this.context.update({
+      access: {
+        name: this.state.companyName,
+        email: this.state.companyEmail
+      }
+    })
     this.props.history.push('/job');
   },
 
@@ -33,7 +42,7 @@ const Login = React.createClass({
         <input
           className='text-input margin-bottom-1'
           type='text'
-          placeholder='Company'
+          placeholder='Name'
           value={this.state.companyName}
           onChange={this.onChange.bind(this, 'companyName')} />
 

@@ -6,19 +6,31 @@ const ReactDOM = require('react-dom');
 const App = React.createClass({
 
   childContextTypes: {
-    jobs: React.PropTypes.array
+    jobs: React.PropTypes.array,
+    access: React.PropTypes.object,
+    update: React.PropTypes.func
   },
 
   getInitialState() {
     return {
-      jobs: []
+      jobs: [],
+      access: {
+        company: null,
+        email: null
+      }
     }
   },
 
   getChildContext() {
     return {
-      jobs: this.state.jobs
+      jobs: this.state.jobs,
+      access: this.state.access,
+      update: this.onUpdate
     }
+  },
+
+  onUpdate(newStatePartial) {
+    this.setState(newStatePartial)
   },
 
   componentDidMount() {
@@ -27,9 +39,9 @@ const App = React.createClass({
       .then(response => {
         return response.json()
       }).then(body => {
-        console.warn(body)
+        console.log('\nUPDATE DATA', body)
         this.setState({
-          jobs: body
+          jobs: body.reverse()
         })
         NProgress.done();
       })
